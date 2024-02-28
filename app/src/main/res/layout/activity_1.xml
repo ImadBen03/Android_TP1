@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="Veuillez saisir une valeur"
+        android:gravity="center"
+        >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        >
+        <RadioButton
+            android:id="@+id/eur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Euro --> DZD"
+            />
+        <RadioButton
+            android:id="@+id/dz"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="DZD --> Euro"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt"
+        android:layout_centerHorizontal="true"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group"
+        android:text="Convertir"
+        />
+
+    <TextView
+        android:id="@+id/rtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:text="@string/result"
+        android:textSize="20sp"
+        android:layout_below="@+id/bt"/>
+
+
+
+
+
+
+</RelativeLayout>
